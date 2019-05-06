@@ -2,7 +2,7 @@
 
 This is a firefox plugin to extend or replace your URL with your affiliation code.
 Currently it only supports BangGood but further stores are planned.
-The default value of the affiliation code is our very own which we are using for our FPV-KA Community (htttps://fpv-ka.de).
+The default value of the affiliation code is our very own which we are using for our FPV-KA Community (https://fpv-ka.de).
 
 You do not pay any extras while using this plugin and you will not notice it. It will not reload your page twice or affact it in any other circumstances.
 
