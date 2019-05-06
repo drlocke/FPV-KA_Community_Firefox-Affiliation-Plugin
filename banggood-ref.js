@@ -14,7 +14,7 @@ if (!url.includes(refCode))
 		if (postUrl.includes("p=")) {
 			//replace existing ref code
 			var regex = new RegExp("p=\\w+&");
-			postUrl = postUrl.replace(regex, refCode);
+			postUrl = postUrl.replace(regex, refCode + "&");
 		} else {
 			//add our very own ref code to the front
 			postUrl = postUrl.replace("?", "?" + refCode + "&");
