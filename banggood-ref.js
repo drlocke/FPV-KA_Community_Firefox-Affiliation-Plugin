@@ -1,31 +1,67 @@
-/* document.body.style.border = "5px solid red";
+var defaultRefCode = "NG011621283472201805";
 
-var x = document.URL    */
 var url = window.location.toString();
 
-var refCode = "p=NG011621283472201805";
-if (!url.includes(refCode))
+function setRefCode(code)
 {
-	var prefixIndex = url.lastIndexOf('/') + 1;
-	var prefixUrl = url.substr(0, prefixIndex);
-	var postUrl = url.substr(prefixIndex);
+	browser.storage.sync.set({
+		refcode_banggood: code
+	});
 	
-	if (postUrl.includes("?")) {
-		if (postUrl.includes("p=")) {
-			//replace existing ref code
-			var regex = new RegExp("p=\\w+&");
-			postUrl = postUrl.replace(regex, refCode + "&");
-		} else {
-			//add our very own ref code to the front
-			postUrl = postUrl.replace("?", "?" + refCode + "&");
-		}
-	} else {
-		postUrl = postUrl.concat("?" + refCode);
-	}
-	
-	if (postUrl != null)
+	console.log(">>>>>> code=" + code);
+	if (!code.startsWith("p="))
 	{
-		history.replaceState(null, null, postUrl);
-		//window.location = prefixUrl + postUrl;
+		code = "p=" + code;
+	}
+	else
+	{
+	console.log(`Error: code=${code}`);
+	}
+	console.log(">>>>>> code(+p=)=" + code);
+
+	if (!url.includes(code))
+	{
+		var prefixIndex = url.lastIndexOf('/') + 1;
+		var prefixUrl = url.substr(0, prefixIndex);
+		var postUrl = url.substr(prefixIndex);
+		
+		if (postUrl.includes("?")) {
+			if (postUrl.includes("p=")) {
+				//replace existing ref code
+				var regex = new RegExp("p=\\w+&");
+				postUrl = postUrl.replace(regex, code + "&");
+			} else {
+				//add our very own ref code to the front
+				postUrl = postUrl.replace("?", "?" + code + "&");
+			}
+		} else {
+			postUrl = postUrl.concat("?" + code);
+		}
+		
+		if (postUrl != null)
+		{
+			history.replaceState(null, null, postUrl);
+			//window.location = prefixUrl + postUrl;
+		}
+	}	
+}
+
+var optRefCode = browser.storage.sync.get("refcode_banggood");
+
+function onError(error) {
+	console.log(`Error: ${error}`);
+	setRefCode(defaultRefCode);
+}
+
+function onGot(item) {
+	if (item.refcode_banggood) 
+	{
+		setRefCode(item.refcode_banggood);
+	}
+	else
+	{
+		setRefCode(defaultRefCode);
 	}
 }
+
+optRefCode.then(onGot, onError);
