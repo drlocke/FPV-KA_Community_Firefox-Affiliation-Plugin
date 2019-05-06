@@ -1,6 +1,6 @@
 {
 
-  "description": "FPV-KA Affiliation Plugin \n\nThis plugin extends or replaces your URL with an affiliation code. Currently it only supports BangGood but further stores are planned. The default value of the affiliation code is our very own which we are using for our FPV-KA Community (https://fpv-ka.de) but you can change it in the plugin settings. \n\nOpen Source: https://github.com/drlocke/FPV-KA_Community_Firefox-Affiliation-Plugin",
+  "description": "This plugin extends or replaces your URL with an affiliation code. Currently it only supports BangGood but further stores are planned. The default value of the affiliation code is our very own which we are using for our FPV-KA Community (https://fpv-ka.de) but you can change it in the plugin settings. \n\nOpen Source: https://github.com/drlocke/FPV-KA_Community_Firefox-Affiliation-Plugin",
   "manifest_version": 2,
   "name": "FPV-KA Affiliation-Plugin",
   "version": "1.0",
