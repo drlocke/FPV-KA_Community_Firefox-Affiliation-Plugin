@@ -1,6 +1,4 @@
-var defaultRefCode = "NG011621283472201805";
-
-var url = window.location.toString();
+var defaultRefCode = "H8052232981273201905";
 
 function setRefCode(code)
 {
@@ -12,6 +10,8 @@ function setRefCode(code)
 	{
 		code = "p=" + code;
 	}
+
+	var url = window.location.toString();
 
 	if (!url.includes(code))
 	{
