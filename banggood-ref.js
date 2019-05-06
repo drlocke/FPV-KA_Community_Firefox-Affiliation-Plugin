@@ -8,16 +8,10 @@ function setRefCode(code)
 		refcode_banggood: code
 	});
 	
-	console.log(">>>>>> code=" + code);
 	if (!code.startsWith("p="))
 	{
 		code = "p=" + code;
 	}
-	else
-	{
-	console.log(`Error: code=${code}`);
-	}
-	console.log(">>>>>> code(+p=)=" + code);
 
 	if (!url.includes(code))
 	{
