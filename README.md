@@ -1,4 +1,4 @@
-# KA-FPV-Community Firefox Affiliation Plugin
+# FPV-KA Community Firefox Affiliation Plugin
 
 This is a firefox plugin to extend or replace your URL with your affiliation code.
 Currently it only supports BangGood but further stores are planned.
