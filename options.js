@@ -8,7 +8,7 @@ function saveOptions(e) {
 function restoreOptions() {
 
   function setCurrentChoice(result) {
-    document.querySelector("#refcode_banggood").value = result.refcode_banggood;
+    document.querySelector("#refcode_banggood").value = result.refcode_banggood || "H8052232981273201905";
   }
 
   function onError(error) {
