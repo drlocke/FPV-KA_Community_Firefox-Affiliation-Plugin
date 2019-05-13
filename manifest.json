@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "FPV-KA Affiliation-Plugin",
-  "version": "1.1",
+  "version": "1.2",
   "homepage_url": "https://www.fpv-ka.de",
   "icons": {
     "48": "icons/fpv_small.jpg"
