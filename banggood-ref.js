@@ -13,7 +13,9 @@ function setRefCode(code)
 
 	var url = window.location.toString();
 
-	if (!url.includes(code))
+	var codeExtended = code + "&";
+
+	if (!url.includes(codeExtended))
 	{
 		var prefixIndex = url.lastIndexOf('/') + 1;
 		var prefixUrl = url.substr(0, prefixIndex);
