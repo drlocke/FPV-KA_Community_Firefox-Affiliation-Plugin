@@ -9,5 +9,5 @@ You do not pay any extras while using this plugin and you will not notice it. It
 We're planning to add this addon to the firefox store when the development is done.
 
 
-This plugin is reviewed and verified by Google. 
-You can add it to your browsere here: https://addons.mozilla.org/de/firefox/addon/fpv-ka-affiliation-plugin
+This plugin is reviewed and verified by Mozilla. 
+You can find it in the addons store: https://addons.mozilla.org/de/firefox/addon/fpv-ka-affiliation-plugin
