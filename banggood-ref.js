@@ -22,9 +22,9 @@ function setRefCode(code)
 		var postUrl = url.substr(prefixIndex);
 		
 		if (postUrl.includes("?")) {
-			if (postUrl.includes("p=")) {
+			if (postUrl.includes("?p=") || postUrl.includes("&p=")) {
 				//replace existing ref code
-				var regex = new RegExp("p=\\w+&");
+				var regex = new RegExp("(?<=([?|&]))p=\\w+&");
 				postUrl = postUrl.replace(regex, code + "&");
 			} else {
 				//add our very own ref code to the front
